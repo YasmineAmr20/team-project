@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            header{
+                
+                height: 100vh;
+             -webkit-background-size: cover;
+                background-size:cover ;
+                background-position:center;
+                position: relative;
+                
+                display: flex;
+            }
+            header img{
+                    width: -webkit-fill-available;
+            }
+            .container{
+                width: 45%;
+                height: 343px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                top: 23%;
+                position: absolute;
+                left: 28%;
+            }
+            /* inputs */
+            .user #userName{
+                width: -webkit-fill-available;
+                border: solid;
+                padding: 5px;
+                height: 34px;
+                font-size: 18px;
+                margin-top: 21px;
+                margin-bottom: 22px;
+                border-color: #070807;
+              border-radius: 13px;
+            }
+            .user #userName:hover{
+                border-color: #070807;
+            }
+            .user #password{
+                width: -webkit-fill-available;
+                border: solid;
+                padding: 5px;
+                border-color: #070807;
+                height: 34px;
+                font-size: 18px;
+                margin-bottom: 29px;
+                margin-top: 16px;
+                border-radius: 13px;
+
+            }
+            .user #password:hover{
+                border-color: #040505;
+            }
+            .radio  #one{
+                margin-left: -54px;
+                font-family: system-ui;
+                font-size: 25px;
+                color: white;
+                font-weight: 700;
+
+                margin-right: 32px;
+            }
+            .radio  #two{
+                margin-left: -8px;
+                font-family: system-ui;
+                font-size: 25px;
+                color: white;
+                font-weight: 700;
+                margin-right: 32px;
+            }
+            .radio  #three{
+                margin-left: -8px;
+                font-family: system-ui;
+                font-size: 25px;
+                color: white;
+                font-weight: 700;
+                margin-right: 32px;
+            }
+            .radio #one:hover{
+                color: gray;
+                
+            }
+            .radio #two:hover{
+               color: gray;
+                
+            }
+            .radio #three:hover{
+                color: gray;
+                
+            }
+            .radio{
+                position: relative;
+                left: 83px;
+            }
+
+            .log-btn input{
+                border-radius: 7px;
+                width: 169px;
+                border: solid;
+                height: 38px;
+                font-size: 25px;
+                position: relative;
+                left: 125px;
+                font-weight: 700;
+                margin-top: 29px;
+            
+                color: #ecf0ec;
+                background-color: black;
+
+            }
+            .log-btn input:hover{
+                background-color: #f7faf8;
+                border-color: black;
+                color: black;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="..\images\lock.jpg" alt="image">
+
+        <div class="container">    
+            <form action="/" method="post" name="form1">
+                <div class="user">
+                    <!-- <label for="userName">UserName</label> -->
+                <input type="text" name="userName" id="userName" placeholder="username">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" name="password" id="password" placeholder="password">
+            </div>
+            
+            <div class="radio">
+                <label id="one">
+                    <input type="radio" name="user" value="admin">
+                    admin
+                </label>
+                
+                <label id="two">
+                    <input type="radio" name="user" value="doctor">
+                    doctor
+                </label>
+                
+                <label id="three">
+                    <input type="radio" name="user" value="student">
+                    student
+                </label>
+                
+            </div>
+            
+            <div class="log-btn">
+                <input type="button" value="Login">
+            </div>
+        </form>
+    </div>
+
+
+    
+</header>
+</body>
+</html>
