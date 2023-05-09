@@ -1,0 +1,14 @@
+<h1>
+   All Subjects
+</h1>
+<button style="background-color: #2296ad;" onclick="window.location.href = '/subjects/createNewSubject';">Add New Subject</button>
+
+
+{{#each subj}}
+<div>
+<a href="/subjects/{{_id}}">  <h3>{{sub_name}}</h3>  </a>
+
+</div>
+
+
+{{/each}}
