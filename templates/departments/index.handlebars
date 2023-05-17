@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_departs</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Department</h1>
+    <br>
+<div class="my-1 mr-5" >
+    <button type="button" class="btn btn-success">
+        <a href="/departments/create"  >Add a new Department</a>
+    </button>
+
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Dept_code</th>
+      <th scope="col">Dept_name</th>
+      <th scope="col">operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{!-- <tr>
+      
+      <td>200</td>
+      <td>CS</td>
+      <td>
+        <button type="button" class="btn btn-success">Edit</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+
+      </td>
+    </tr>
+    <tr>
+      
+      <td>201</td>
+      <td>IT</td>
+      <td>
+        <button type="button" class="btn btn-success">Edit</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+
+      </td>
+    </tr>
+    <tr>
+      
+      <td >202</td>
+      <td >IS</td>
+      <td>
+        <button type="button" class="btn btn-success">Edit</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+
+      </td>
+    </tr> --}}
+    
+    {{#each  departments}}
+  <tr>
+  <a href="/departments/{{_id}}">
+  
+  <td>{{Dept_code}} </td>,
+  <td>{{Dept_name}}</td>
+</a>
+<td>
+        <button type="button" class="btn btn-success">Edit</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+
+      </td>
+</tr>
+{{/each}}
+    
+
+  </tbody>
+</table>
+
+
+
+
+{{!-- <div class="my-8">
+    <button type="button" class="btn btn-danger">
+
+        <a href="/departments/delete">Delete a Department</a>
+    </button>
+
+</div> --}}
+{{!-- <table>
+{{#each departments}}
+  <tr>
+  <a href="/departments/{{_id}}">
+ <th>{{code}} </th>,
+ <th>{{name}}</th>
+</a>
+</tr>
+{{/each}}
+</table> --}}
+</body>
+</html>
