@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_departs</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: rgb(253, 251, 251);
+            font-size: 20px;
+        }
+        body{
+             background-color:rgb(48, 46, 45);
+                     font-size:16px;
+        }
+
+        *{
+       font-family: sans-serif;
+       font-weight: bold;
+        color: aliceblue;
+        }
+        
+
+        h1{
+        padding-top: 25px;
+    position: relative;
+    font-size: 44px;
+}
+        
+
+
+
+      .link{
+  position: relative;
+    top: 29px;
+    font-size: 25px;
+
+
+      }  
+      .btn1{
+    position: relative;
+    top: -77px;
+    right: -785px;
+    font-size: 21px;
+    height: 50px;
+    color: white;
+    border: solid;
+    border-radius: 17px;
+    left: 782px;
+    width: 256px;
+    font-weight: bold;
+    background-color: dimgrey;   
+    font-weight: bold;
+    }
+    .btn1:hover{
+          background-color:rgb(49, 49, 49);
+          }
+          
+        .btn2{
+            position: relative;
+          font-size: 21px;
+           height: 50px;
+          color: white;
+          border: solid;
+          background-color: dimgrey;         
+             border-radius: 17px;   
+          left: -39px;
+          width: 93px;
+          font-weight: bold;
+          height: 52px;
+          top: 28px;
+    
+        }  
+    
+        .btn2:hover{
+          background-color:rgb(49, 49, 49);
+          }
+
+
+   .btn3{
+        position: relative;
+        left: 70px;
+        font-size: 21px;
+        width: 93px;
+        font-weight: bold;
+        height: 50px;
+        color: white;
+        border: solid;
+       background-color: dimgrey;         
+        border-radius: 17px;
+        top: -23px;
+          left: 88px;
+          
+        }
+
+        .btn3:hover{
+          background-color:rgb(49, 49, 49);
+          }
+
+
+         table,th,td{
+                 margin: 10px;
+                 font-size: 20px;
+        }
+            
+
+
+    </style>
+</head>
+
+<body>
+
+
+
+    
+    <h1>All Departments</h1>
+    <br>
+<div  >
+      <button type="button" class="btn1">
+
+        <a href="/departments/create"  >Add New Department</a>
+    </button>
+</div>
+
+
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th style="font-style:italic;font-size:26px;" scope="col">Dept_name</th>
+      <th style="font-style:italic;font-size:26px;" scope="col">Operations</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+
+    {{#each  departments}}
+  <tr>
+  <td ><a href="/departments/{{_id}}" class="link">{{Dept_name}}</a></td>
+
+<td>
+        <button type="button" class="btn2"><a href="/departments/{{_id}}/edit">Edit</a></button>
+        
+       <form action="/departments/{{_id}}?_method=DELETE" method="POST"  >
+                <button type="submit" class="btn3" onclick="confirm('Are you sure you wish to delete this Department?');">Delete</button>
+
+       </form>
+         
+      </td>
+</tr>
+{{/each}}
+    
+  </tbody>
+
+</table>
+
+
+
+</body>
+</html>
