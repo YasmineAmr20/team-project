@@ -11,7 +11,7 @@ const doc_subjectSchema = new Schema({
     Subject: {
         type: Schema.Types.ObjectId,
         required: true,
-        ref: 'Subject'
+        ref: 'subject'
     }
 });
 

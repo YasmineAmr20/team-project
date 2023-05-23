@@ -81,7 +81,7 @@ export const saveAssignment = async (request, response) => {
 export const getAssigned = async (request, response) => {
     const { _id } = request.params;
     const doctordetails = await doctorModel.findById(_id).lean();
-    const doctorSubjects = await doc_subjectModel.find({ Doctor: _id }).populate('subject').lean();
+    const doctorSubjects = await doc_subjectModel.find({ Doctor: _id }).populate('Subject').lean();
     console.log(doctordetails)
     console.log(doctorSubjects)
     response.render('doctorAdmin/allAssignedSubjects', { doctordetails, doctorSubjects })
@@ -90,5 +90,5 @@ export const getAssigned = async (request, response) => {
 export const deleteAssigned = async (request, response) => {
     const { _id } = request.params;
     await doc_subjectModel.findByIdAndDelete(_id).lean();
-    return response.redirect("/doctorAdmin/allAssignedSubjects");
+    return response.redirect("/doctorAdmin/getAllDoctors");
 }

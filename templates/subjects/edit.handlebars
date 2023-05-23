@@ -1,17 +1,17 @@
-<h1 style="margin-left: 400px"> Edit {{subject.sub_name}}</h1>
+<h1> Edit {{subject.sub_name}}</h1>
 <br>
-<form action="/subjects/{{subject._id}}?_method=PUT" method="POST" style="background-color:rgb(45 33 90 / 84%) ;border-radius:20px;margin-left: 70px ">
+<form action="/subjects/{{subject._id}}?_method=PUT" method="POST" class="editDoctorForm">
   {{!sub_name}}
   <div>
     <label for="" style="margin-left: 70px;margin-top:15px">Subject Name</label>
-    <input type="text" class="form-control" name="sub_name" value="{{subject.sub_name}}" style="width: 900px;margin-left: 70px"/>
+    <input type="text" class="form-control" name="sub_name" value="{{subject.sub_name}}"/>
 
   </div>
   <br />
   {{!sub_code}}
   <div>
     <label for=""style="margin-left: 70px">Subject Code</label>
-    <input type="text" class="form-control" name="sub_code" value="{{subject.sub_code}}"style="width: 900px;margin-left: 70px" />
+    <input type="text" class="form-control" name="sub_code" value="{{subject.sub_code}}"/>
 
   </div>
   <br />
