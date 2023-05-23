@@ -1,0 +1,78 @@
+<h1>
+   All Subjects 📖 
+</h1>
+<button id="btn" style=" width: 25%;
+    height: 45px;" onclick="window.location.href = '/subjects/createNewSubject';"> Add New Subject 📤</button>
+
+
+{{#each subj}}
+
+<div class="container"> 
+<a href="/subjects/{{_id}}">  <h3>{{sub_name}}</h3>  </a>
+
+
+   <div class="d-flex ">
+      <button onclick="window.location.href = '/subjects/{{_id}}/edit';">Edit 📋</button>
+
+      <form action="/subjects/{{_id}}?_method=DELETE" method="post" onclick="return confirm('Are you sure you wish to delete this Subject?');">
+      <button  type="submit" >Delete ❌🗑️</button>
+      </form>
+   </div>
+<style>
+   a{
+      text-decoration: none;
+   }
+   h1{
+      color: white; 
+   }
+   h3{
+      color: white; 
+   
+      font-family: cursive;
+   }
+   button{
+      color: white;
+      background-color: #cff7ff99;
+      font-size: large;
+     border-radius: 5px;
+    font-family: cursive;
+   }
+    button:hover{
+   background-color: rgb(13, 10, 37);
+}
+
+#btn{
+   color: white;
+
+ border-radius: 20px;
+ margin-left: 40%;
+}
+body{
+   
+   background-color: #080c2e;
+   border-radius: 3px;
+   margin: 10%;
+   margin-top: 5%;
+}
+      
+   
+.d-flex {
+    display: flex!important;
+    justify-content: flex-end;
+}
+ .container{
+   border: 1px solid #fff;
+   background-color: #080c2ee0;
+padding-right: 22px;
+padding-bottom: 7px;
+  width: 100%;
+  margin: 8px ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+</style>
+
+
+</div>
+{{/each}}

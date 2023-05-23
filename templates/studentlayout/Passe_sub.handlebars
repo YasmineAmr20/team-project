@@ -1,0 +1,45 @@
+ <style>
+ body{
+   
+   background-color: #080c2e;
+   border-radius: 3px;
+   margin: 10%;
+   margin-top: 5%;
+   color: aliceblue;
+  }
+</style>
+
+
+<div class="py-5">
+    <form  action="/student/{{_id}}/assignSubject" method="post"  style=" color:aliceblue;">
+
+        <!-- #region form title-->
+        <h1 class="text-center" style=" color:aliceblue;">Assign a Passed subject to student</h1>
+        <!-- #endregion -->
+
+        <div class="my-3" style=" color:aliceblue;">
+            <label for="" >Student ID</label>
+            <input  name="student"  type="text" class="form-control" value="{{_id}}">
+        </div>
+
+        {{!-- subject --}}
+        <div class="mb-3" style=" color:aliceblue;">
+            <label for="" class="form-label">Subject Name</label>
+            <select name="Subject" id="" class="form-select"  >
+                {{#each subjects}}
+                <option value="{{_id}}" >{{sub_name}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        {{!-- assign button --}}
+        <button type="submit" class="btn btn-info  my-4" style="color: rgb(140, 94, 233);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(255,255,255,1)"></path>
+            </svg>
+            Assign
+        </button>
+
+    </form>
+
+</div>

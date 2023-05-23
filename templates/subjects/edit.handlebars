@@ -1,0 +1,83 @@
+<h1> Edit {{subject.sub_name}}</h1>
+<br>
+<form action="/subjects/{{subject._id}}?_method=PUT" method="POST" class="editDoctorForm">
+  {{!sub_name}}
+  <div>
+    <label for="" style="margin-left: 70px;margin-top:15px">Subject Name</label>
+    <input type="text" class="form-control" name="sub_name" value="{{subject.sub_name}}"/>
+
+  </div>
+  <br />
+  {{!sub_code}}
+  <div>
+    <label for=""style="margin-left: 70px">Subject Code</label>
+    <input type="text" class="form-control" name="sub_code" value="{{subject.sub_code}}"/>
+
+  </div>
+  <br />
+
+  {{!sub_code}}
+  <div>
+    <label for=""style="margin-left: 70px">Previous Require</label>
+    <input type="text" class="form-control" name="previous_require" value="{{subject.previous_require}}"style="width: 900px; margin-left: 70px" />
+  </div>
+  <br />
+
+  {{!dept_name}}
+  <div>
+    <label for=""style="margin-left: 70px">Department Name</label>
+    <select name="dept_name" id="" class="form-select"style="width: 900px; margin-left: 70px">
+      {{#each departments}}
+        <option value="{{_id}}">{{Dept_name}}</option>
+
+      {{/each}}
+
+    </select>
+  </div>
+  <br />
+
+  {{! <div class="btn btn-success" type="submit">Save</div> }}
+  <button type="submit" >Save</button>
+
+  <style>
+   h1{
+      color: white; 
+   }
+   body{
+       background-color:#080c2e;
+   border-radius: 3px;
+   margin: 10%;
+   margin-top: 5%;
+border-color: white;
+   }
+    button{
+      color: white;
+      background-color: rgb(150, 147, 147);
+      font-size: larger;
+     border-radius: 5px;
+    font-family: cursive ;
+    padding-left: 20px;
+    padding-right :20px ;
+   margin-left: 880px;
+     margin-top: 20px;
+ margin-bottom: 10px;
+   }
+    button:hover{
+   background-color: rgb(13, 10, 37);
+}
+  
+   input{
+   
+    margin: 8px;
+    height: 44px;
+   }
+   input[type=text]:focus {
+  border: 3px solid #3902eec0;
+}
+   label {
+    font-size: large;
+    color: whitesmoke;
+    margin-bottom: 2px;
+    }
+   </style>
+</form>

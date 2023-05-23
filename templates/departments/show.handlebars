@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        body{
+             background-color:rgb(48, 46, 45);
+       }
+       
+         *{
+       font-family: sans-serif;
+       font-weight: bold;
+        color: aliceblue;
+    font-style: italic;
+        font-size: 22px;
+
+
+        }
+    
+    .table{
+        text-align: center;
+    }
+
+h1{
+        position: relative;
+    padding-left: 35px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 23px;
+    font-size: 38px;
+}
+    </style>
+</head>
+<body>
+<h1>Information about this department</h1>
+<br>
+
+
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="font-style: italic;font-size:26px;" scope="col">Dept_name</th>
+            <th style="font-style: italic;font-size:26px;" scope="col">Dept_code</th>
+        </tr>
+    </thead>
+    <tbody>
+     
+
+
+        <tr>
+            <td>{{deptModel.Dept_name}}</td>
+             <td>{{deptModel.Dept_code}}</td>
+
+            
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+
+</body>
+</html>
