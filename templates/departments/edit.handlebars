@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <style>
+
+    body{
+          background-color:  rgb(13, 10, 37);
+    }
+    .container{
+        
+         width: 1041px;
+    height: 600px;
+    margin: 0;
+    border-radius: 13px;
+    padding-top: 39px;
+            }
+    .container label{
+      font-size: 23px;
+    font-weight: bold;
+    margin: 16px;
+    margin-left: 24px
+    }
+    .container input{
+       width: 714px;
+    border: solid;
+    height: 45px;
+    border-radius: 23px;
+    border-color: #ccc;
+    margin-left: 15px;
+
+    }
+    
+    .container .name{
+          display: grid;
+              color: #fff;
+
+    }
+    .container .code{
+          display: grid;
+              color: #fff;
+
+    }
+    .container .btn{
+     color: white;
+    background-color: rgb(150, 147, 147);
+    font-size: larger;
+    border-radius: 5px;
+    font-family: cursive;
+    padding-left: 20;
+    padding-right: 20px;
+    margin-left: 591px;
+    margin-top: -19px;
+    margin-bottom: 20px;
+}
+     .container .btn:hover{
+          background-color:rgb(13,10,37);
+          }
+    
+    h2{
+    padding-left: 208px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -19px;
+    margin-bottom: 46px;
+    font-size: 38px;
+    color: #fff;
+}
+    
+  </style>
+</head>
+<body>
+  
+<div class="container">
+  <h2>Edit {{deptModel.Dept_name}}</h2>
+
+
+  <form action="/departments/{{deptModel._id}}?_method=PUT" method="POST"style="background-color: rgb(45 33 90 / 84%);
+    border-radius: 20px;margin-left: 272px;height=50px; ">
+
+
+    {{!--Name--}}
+
+    <div class="name">
+      <label for="name" >Name</label>
+      <input type="text" for name="Dept_name" value="{{deptModel.Dept_name}}">
+    </div>
+
+    {{!--Code--}}
+    <br><br>
+    <div class="code">
+
+      <label for="code">Code</label>
+      <input type="text" name="Dept_code" value="{{deptModel.Dept_code}}">
+    </div>
+
+    <br><br> <br>
+    <div>
+      <button class="btn" type="submit">Save</button>
+    </div>
+
+
+  </form>
+</div>
+
+
+</body>
+</html>

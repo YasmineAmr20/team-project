@@ -1,0 +1,94 @@
+/* page background */
+body {
+    background-image: url('./images/bg.jpg');
+    background-color: rgb(13, 10, 37);
+    color: white;
+}
+
+.addDoctorForm {
+    background-color: rgb(13, 10, 37);
+    border: solid #396fc1 2px;
+    border-radius: 6%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    width: 50%;
+    padding: 15px;
+}
+
+.addDoctorbtn,
+.addDoctorbtn:hover
+{
+    color: white;
+}
+
+.inputDoctorData {
+    width: 50%;
+}
+.linkadd,
+.linkadd:hover {
+    text-decoration: none;
+    color: white;
+}
+.editDoctorLink,
+.editDoctorLink:hover {
+    text-decoration: none;
+    color: white;
+}
+.editDoctorForm {
+    background-color:rgb(13, 10, 37);
+    
+}
+/***********************************************************************************/
+/* subject container */
+.subject_container,
+.doctorInfo {
+    width: 100%;
+    background-color: rgb(13, 10, 37);
+    border-radius: 7%;
+    color: white;
+    width: 100%;
+}
+
+/* subject table */
+.table {
+    color: white;
+    width: 100%;
+}
+
+/* delete anchor */
+.delete {
+    margin: auto;
+    width: 90px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.delete:hover {
+    color: white;
+}
+
+/* form to assign subject to doctor */
+.assign_form {
+    border: solid #396fc1 2px;
+    border-radius: 5%;
+    color: white;
+    margin: auto;
+    padding: 40px;
+}
+
+/* assign button */
+.assign_btn,
+.assign_btn:hover {
+    color: white;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 200px;
+}

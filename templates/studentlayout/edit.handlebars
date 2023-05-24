@@ -1,0 +1,48 @@
+<style>
+ body{
+   
+   background-color: #080c2e;
+   border-radius: 3px;
+   margin: 10%;
+   margin-top: 5%;
+   color: aliceblue;
+  }
+</style>
+
+
+<form action="/student/{{editStd._id}}?_method=PUT" method="post"  style="color:aliceblue;">
+
+   
+    <h2 class="text-center">Edit Student {{editStd.std_name}}</h2>
+   
+    <div class="my-3 ">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="std_name" value="{{editStd.std_name}}" id="text">
+    </div>
+
+    <div class="my-3 ">
+        <label for="">Acadimic Number</label>
+        <input type="number"     class="form-control" name="std_Acadimic" value="{{editStd.std_Academic}}" id="number">
+    </div>
+    <div class="my-3 ">
+        <label for="">Email</label>
+        <input type="email"     class="form-control" name="std_Email" value="{{editStd.std_Email}}" id="email">
+    </div>
+    
+    <div class="my-3 ">
+        <label for="">Password</label>
+        <input type="text" class="form-control" name="std_password" value="{{editStd.std_password}}" >
+    </div>
+
+    
+    <div class="my-3">
+        <button type="submit" class="btn btn-info " style="color: rgb(140, 94, 233);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(255,255,255,1)"></path>
+            </svg>
+           Update
+        </button>
+    </div>
+
+</form>
+  </form>

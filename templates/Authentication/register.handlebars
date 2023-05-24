@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+</head>
+<body>
+    <section class="h-20 bg-dark">
+        <form action="/register" method="post">
+            <div class="container  h-0">
+                <div class="row d-flex justify-content-center align-items-center h-5">
+                <div class="col">
+                    <div class="card card-registration my-2">
+                    <div class="row g-0">
+                        <div class="col-xl-6 d-none d-xl-block">
+                        <img src="../../images/img4.jpeg"
+                            alt="Sample photo" class="img"
+                            style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height:614px" />
+                        </div>
+                        <div class="col-xl-6">
+                        <div class="card-body p-md-2 text-black">
+                            <h3 class="mb-5 text-uppercase">Add New User</h3>
+
+                            
+                            <div class="form-outline mb-4">
+                                <div class="form-outline">
+                                <label class="form-label" for="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+            
+                            <div class="form-outline mb-4">
+                            <label class="form-label" for="email">Email ID</label>
+                            <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                            </div>
+
+
+                            <div class="form-outline mb-4">
+                            <label class="form-label" for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                            </div>
+
+                            {{!-- <div class="form-outline mb-4">
+                                <select name="Sub_name" id="" class="form-select" >
+                                        {{#each subjects}}
+                                            <option value="{{_id}}">{{Sub_name}}</option>
+                                            
+
+                                        {{/each}}
+                                        <option value="play">play</option>
+                                    </select> --}}
+                                {{!-- <label class="form-label" for="course">Course</label>
+                                <input type="text" id="course" name="course" class="form-control form-control-lg" /> --}}
+                            </div>
+
+                        
+
+                            <div class="d-flex justify-content-center pt-3">
+                            <button type="reset" class="btn btn-light btn-lg">Reset all</button>
+                            <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </form>
+        </section>
+</body>
+</html>
